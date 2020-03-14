@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Générateur de cartes</title>
+        <link rel="stylesheet" href="perlin.css"/>
+    </head>
+    <body>
+        <div id="mainDiv">
+            <div>
+                <div class="formContainer">
+                    <h3 class="formTitle">Paramètres de la carte</h3>
+                    <form>
+                        <div class="inputDiv">
+                            <label for="nbRowsInput">Nombre de lignes <span id="nbRowsLim"></span></label>
+                            <input id="nbRowsInput" name="nbRows" type="number" min="50" max="150" value="100"/>
+                        </div>
+                        <div class="inputDiv">
+                            <label for="nbColumnsInput">Nombre de colonnes <span id="nbColumnsLim"></span></label>
+                            <input id="nbColumnsInput" name="nbColumns" type="number" min="50" max="150" value="100"/>
+                        </div>
+                        <div class="inputDiv">
+                            <label for="resolutionInput">Résolution du bruit <span id="resolutionLim"></span></label>
+                            <input id="resolutionInput" name="resolution" type="number" min="30" max="100" value="30"/>
+                        </div>
+                        <small>Plus la résolution est élevée, plus la carte est composée de grandes formes lisses.<br/>
+                        Plus la résolution est basse, plus la carte est composée de nombreuses formes biscornues.</small>
+                        <div class="inputDiv">
+                            <label for="squareSizeInput">Taille des cases, en px <span id="squareSizeLim"></span></label>
+                            <input id="squareSizeInput" name="squareSize" type="number" min="5" max="20" value="7"/>
+                        </div>
+                        <div class="inputDiv">
+                            <label for="nbTownsInput">Nombre de villes <span id="nbTownsLim"></span></label>
+                            <input id="nbTownsInput" name="nbTowns" type="number" min="0" max="10" value="5"/>
+                        </div>
+                        <div class="inputDiv">
+                            <label for="townsNamedInput">Nommer les villes</label>
+                            <input id="townsNamedInput" name="townsNamed" type="checkbox" checked/>
+                        </div>
+                        <small>Les îles et villes sont nommées en choisissant aléatoirement parmi une liste de noms pré-établis.</small>
+                        <div class="checkboxDiv">
+                            <h3>Biomes autorisés</h3>
+                            <div id="grassCheckboxDiv" class="inputDiv">
+                                <label for="grass">Prairie</label>
+                                <input type="checkbox" id="grassCheckbox" name="grass" checked/>
+                            </div>
+                            <div id="mountainCheckboxDiv" class="inputDiv">
+                                <label for="mountain">Montagne</label>
+                                <input type="checkbox" id="mountainCheckbox" name="mountain" checked/>
+                            </div>
+                            <div id="dryCheckboxDiv" class="inputDiv">
+                                <label for="dry">Friches / Désert</label>
+                                <input type="checkbox" id="dryCheckbox" name="dry" checked/>
+                            </div>
+                            <div id="snowCheckboxDiv" class="inputDiv">
+                                <label for="snow">Neige</label>
+                                <input type="checkbox" id="snowCheckbox" name="snow" checked/>
+                            </div>
+                            <div id="darkCheckboxDiv" class="inputDiv">
+                                <label for="dark">Terres du Mal</label>
+                                <input type="checkbox" id="darkCheckbox" name="dark" checked/>
+                            </div>
+                        </div>
+                        <button id="mapBtn">Générer carte</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="canvasContainer">
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <div class="infoAndSaveDiv">
+                <p id="generationTimeP">Carte générée en <b id="generationTime"></b></p>
+                <div id="squareInfoDiv">
+                    <p><span id="infoSpan">Informations</span></p>
+                    <p><span id="islandNameSpan"></span></p>
+                    <p><span id="townNameSpan"></span></p>
+                    <p>Coordonnées : <span id="coordinatesSpan"></span></p>
+                    <p>Type de terrain : <span id="fieldTypeSpan"></span></p>
+                    <p>Altitude : <span id="altitudeSpan"></span></p>
+                </div>
+                <a id="saveMapBtn">Enregistrer la carte</a>
+            </div>
+
+        </div>
+        <script src="perlin.js"></script>
+    </body>
+</html>

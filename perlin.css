@@ -1,0 +1,176 @@
+#mainDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* CANVAS */
+#canvasContainer {
+    padding: 0px;
+}
+
+canvas {
+    border-style: solid;
+    border-width: 1px;
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+    font-family: 'Arial';
+    font-size: 20px;
+}
+
+
+/* FORM */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: lightgrey;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    font-family: 'Arial';
+    font-size: 20px;
+    border: solid 1px grey;
+    margin-right: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.formTitle {
+    margin: 0px;
+    text-align: center;
+    background-color: #dddddd;
+    padding: 10px;
+    border-bottom: solid 1px grey;
+}
+
+input[type="number"] {
+    width: 50px;
+    font-size: 20px;
+    text-align: right;
+    margin-left:10px;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: row;
+    min-height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkboxDiv {
+    display: flex;
+    flex-direction: column;
+    border: none 1px grey;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.checkboxDiv > h3 {
+    margin: 0px;
+}
+
+#grassCheckboxDiv {
+    background-color: #31c831;
+    padding: 5px;
+}
+#dryCheckboxDiv {
+    background-color: #c8ba8d;
+    padding: 5px;
+}
+#mountainCheckboxDiv {
+    background-color: #cd853f;
+    padding: 5px;
+}
+#snowCheckboxDiv {
+    background-color: #cfebfd;
+    padding: 5px;
+}
+#darkCheckboxDiv {
+    background-color: #a9a9a9;
+    padding: 5px;
+}
+
+
+/* INFO AND SAVE MAP */
+#generationTimeP {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#mapBtn {
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+.infoAndSaveDiv {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+#squareInfoDiv {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-family: 'Arial';
+    font-size: 20px;
+    border: solid 2px grey;
+    padding:10px;
+    margin-top: 0px;
+    width: 300px;
+}
+
+
+#infoSpan {
+    font-family: 'Arial';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#coordinates {
+    font-family: 'Arial';
+    font-size: 20px;
+}
+
+#fieldType {
+    font-family: 'Arial';
+    font-size: 20px;
+}
+
+#saveMapBtn {
+    width: 200px;
+    font-size: 20px;
+    font-family: 'Arial';
+    text-align: center;
+    background-color: lightgrey;
+    margin-top: 20px;
+    padding: 5px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 5px;
+}
+
+#saveMapBtn:hover {
+    cursor: pointer;
+}
+
+#saveMapBtn:link {
+    color: black;
+    text-decoration: none;
+}
